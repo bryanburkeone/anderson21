@@ -8,7 +8,7 @@ const db = require('./db');
 const server = createServer();
 
 server.express.use(cookieParser());
-
+//start
 // decode the JWT so we can get the user Id on each request
 server.express.use((req, res, next) => {
     const { token } = req.cookies;
