@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import NavStyles from './styles/NavStyles';
-import Sell from "../pages/sell";
 import Signout from "./Signout";
 import User from "./User";
 

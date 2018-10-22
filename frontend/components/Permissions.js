@@ -1,4 +1,4 @@
-import { Query, Mutation } from 'react-apollo';
+import { Query } from 'react-apollo';
 import Error from './ErrorMessage';
 import gql from 'graphql-tag';
 import Table from './styles/Table';

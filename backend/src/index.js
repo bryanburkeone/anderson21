@@ -40,6 +40,6 @@ server.start(
         },
     },
     deets => {
-        console.log(`Server is now running on port http://localhost:${deets.port}`);
+        console.log(`Yoga Server is now running on port http://localhost:${deets.port}`);
     }
 );
