@@ -8,7 +8,7 @@ const db = require('./db');
 const server = createServer();
 
 server.express.use(cookieParser());
-//start
+
 // decode the JWT so we can get the user Id on each request
 server.express.use((req, res, next) => {
     const { token } = req.cookies;
@@ -40,6 +40,6 @@ server.start(
         },
     },
     deets => {
-        console.log(`Yoga Server is now running on port http://localhost:${deets.port}`);
+        console.log(`Server is now running on port http://localhost:${deets.port}`);
     }
 );

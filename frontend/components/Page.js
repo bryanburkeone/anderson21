@@ -55,19 +55,13 @@ injectGlobal`
 class Page extends Component {
     render () {
         return (
-            <>
-            <Meta />
-            <Header />
-            <div>Hey im the page component</div>
-            {this.props.children}
-            </>
-          /*  <ThemeProvider theme={theme}>
+            <ThemeProvider theme={theme}>
                 <StyledPage>
                     <Meta />
                     <Header />
                     <Inner>{this.props.children}</Inner>
                 </StyledPage>
-            </ThemeProvider> */
+            </ThemeProvider>
         )
     }
 }

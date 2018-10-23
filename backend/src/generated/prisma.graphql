@@ -1,5 +1,5 @@
-# source: https://sick-fitzz-production.herokuapp.com/sick-fits-prod/prod
-# timestamp: Sat Oct 20 2018 13:49:41 GMT-0700 (Pacific Daylight Time)
+# source: https://us1.prisma.sh/bryanburke91/sicccccck-fits/dev
+# timestamp: Wed Oct 17 2018 13:53:48 GMT-0700 (Pacific Daylight Time)
 
 type AggregateItem {
   count: Int!
@@ -25,7 +25,7 @@ type Item implements Node {
   price: Int!
   createdAt: DateTime!
   updatedAt: DateTime!
-  user(where: UserWhereInput): User!
+  user: User!
 }
 
 """A connection to a list of items."""
@@ -131,7 +131,7 @@ input ItemUpdateInput {
   image: String
   largeImage: String
   price: Int
-  user: UserUpdateOneInput
+  user: UserUpdateOneRequiredInput
 }
 
 input ItemWhereInput {
@@ -626,10 +626,9 @@ input UserUpdateInput {
   permissions: UserUpdatepermissionsInput
 }
 
-input UserUpdateOneInput {
+input UserUpdateOneRequiredInput {
   create: UserCreateInput
   connect: UserWhereUniqueInput
-  delete: Boolean
   update: UserUpdateDataInput
   upsert: UserUpsertNestedInput
 }
@@ -892,9 +891,6 @@ input UserWhereInput {
 
   """All values not ending with the given string."""
   resetTokenExpiry_not_ends_with: String
-  _MagicalBackRelation_ItemToUser_every: ItemWhereInput
-  _MagicalBackRelation_ItemToUser_some: ItemWhereInput
-  _MagicalBackRelation_ItemToUser_none: ItemWhereInput
 }
 
 input UserWhereUniqueInput {
