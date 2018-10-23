@@ -33,7 +33,8 @@ const ItemsList = styled.div`
 class Items extends Component {
     render() {
         return (
-            <Center>
+            <p>hey</p>
+           /* <Center>
                 <Query query={ALL_ITEMS_QUERY}>
                     {({data, error, loading}) => {
                         if(loading) return <p>Loading...</p>
@@ -41,7 +42,7 @@ class Items extends Component {
                         return <ItemsList>{data.items.map(item => <Item key={item.id} item={item} />)}</ItemsList>
                     }}
                 </Query>
-            </Center>
+            </Center> */
         )
     }
 }
