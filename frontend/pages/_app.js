@@ -20,8 +20,7 @@ class MyApp extends App {
             <Container>
                 <ApolloProvider client={apollo}>
                     <Page>
-                        <div>hey</div>
-                        {/*<Component {...pageProps}/>*/}
+                        <Component {...pageProps}/>
                     </Page>
                 </ApolloProvider>
             </Container>
